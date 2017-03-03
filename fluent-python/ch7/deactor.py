@@ -6,8 +6,9 @@
 
 import functools
 
+
 def log(arg):
-    def dec(func, txt = 'call'):
+    def dec(func, txt='call'):
         @functools.wraps(func)
         def wrp(*args, **kw):
             print('%s %s():' % (txt, func.__name__))
@@ -19,10 +20,12 @@ def log(arg):
     else:
         return lambda f: dec(f, arg)
 
+
 @log
 def whoru():
     print('i am who i am')
 whoru()
+
 
 @log('EXEC')
 def whoru():

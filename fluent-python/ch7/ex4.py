@@ -1,7 +1,9 @@
 from dis import dis
-def f1(a): 
-    print(a) 
-    print(b) 
+
+
+def f1(a):
+    print(a)
+    print(b)
 
 dis(f1)
 a = 3

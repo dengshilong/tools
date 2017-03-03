@@ -2,37 +2,43 @@ import re
 import reprlib
 
 RE_WORD = re.compile('\w+')
+
+
 class Sentence:
     """
     >>> s = Sentence('word come here again')
-    >>> for word in s: 
-    ...     print(word) 
+    >>> for word in s:
+    ...     print(word)
     ...
-    word 
-    come 
+    word
+    come
     here
-    again 
+    again
     >>> s = Sentence('word come here again')
-    >>> it = iter(s) # 
-    >>> while True: 
+    >>> it = iter(s) #
+    >>> while True:
     ...     try:
     ...         print(next(it))
     ...     except StopIteration:
-    ...         del it 
+    ...         del it
     ...         break
     ...
-    word 
-    come 
+    word
+    come
     here
-    again 
+    again
     """
-    def __init__(self, text): 
+
+    def __init__(self, text):
         self.text = text
-        self.words = RE_WORD.findall(text) 
+        self.words = RE_WORD.findall(text)
+
     def __getitem__(self, index):
-        return self.words[index] 
+        return self.words[index]
+
     def __len__(self):
-        return len(self.words) 
+        return len(self.words)
+
     def __repr__(self):
         return 'Sentence(%s)' % reprlib.repr(self.text)
 

@@ -2,23 +2,32 @@ import re
 import reprlib
 
 RE_WORD = re.compile('\w+')
+
+
 class Sentence:
+
     def __init__(self, text): self.text = text
-        self.words = RE_WORD.findall(text) 
+        self.words = RE_WORD.findall(text)
+
     def __repr__(self):
-        return 'Sentence(%s)' % reprlib.repr(self.text) 
+        return 'Sentence(%s)' % reprlib.repr(self.text)
+
     def __iter__(self):
-        return SentenceIterator(self.words) 
+        return SentenceIterator(self.words)
+
 
 class SentenceIterator:
-    def __init__(self, words): 
+
+    def __init__(self, words):
         self.words = words self.index = 0
-    def __next__(self): 
+
+    def __next__(self):
         try:
-            word = self.words[self.index] 
+            word = self.words[self.index]
         except IndexError:
-            raise StopIteration() 
+            raise StopIteration()
         self.index += 1
-        return word 
+        return word
+
     def __iter__(self):
         return self
