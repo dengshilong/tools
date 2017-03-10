@@ -14,7 +14,6 @@ def log(arg):
             print('%s %s():' % (txt, func.__name__))
             return func(*args, **kw)
         return wrp
-
     if callable(arg):
         return dec(arg)
     else:
