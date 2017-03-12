@@ -1,4 +1,3 @@
-
 class UnHashable(object):
     """
     >>> a = UnHashable(3)
