@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <ul id="list">
+                <li><a href="http://domain1.com">Item #1</a></li>
+                <li><a href="/local/path/1">Item #2</a></li>
+                <li><a href="/local/path/2">Item #3</a></li>
+                <li><a href="http://domain4.com">Item #4</a></li>
+            </ul>
+        </div>
+        <script>
+            $( "#list" ).on( "click",  'a', function( event ) {
+                event.preventDefault();
+                console.log( $( this ).text() );
+            });
+            $( "#list" ).append( "<li><a href='http://newdomain.com'>Item #5</a></li>" );
+        </script>
+    </body>
+</html>
