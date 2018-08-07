@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div id="app">
+<template>
+  <el-checkbox-group v-model="checkList">
+    <el-checkbox label="复选框 A"></el-checkbox>
+    <el-checkbox label="复选框 B"></el-checkbox>
+    <el-checkbox label="复选框 C"></el-checkbox>
+    <el-checkbox label="禁用" disabled></el-checkbox>
+    <el-checkbox label="选中且禁用" disabled></el-checkbox>
+  </el-checkbox-group>
+</template>
+</div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="./vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="./index.js"></script>
+<script>
+    new Vue({
+        el : '#app',
+        data: {
+            checkList: ['选中且禁用','复选框 A']
+        }
+    });
+</script>
+</html>

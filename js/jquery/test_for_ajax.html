@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>sdfsdfs</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    for (var i = 0; i < 5; i++) {
+        console.log("herer");
+        var d = new Date();
+        console.log(d.getTime());
+        $.ajax({
+            url: 'http://program.dengshilong.org/?test=' + i,
+            type: 'GET',
+            dataType: 'JSONP',
+            success:function(response){
+                console.log("success");
+                var d = new Date();
+                console.log(d.getTime());
+            }
+
+        });
+
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-select@latest"></script>
+
+</head>
+<body>
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+    <h2>sdfsd</h2>
+    <v-select v-model="selected" :options="['foo','bar']"></v-select>
+    <h2>sdfsd</h2>
+    <script>
+        Vue.component('v-select', VueSelect.VueSelect);
+        var app4 = new Vue({
+          el: '#app-4',
+          data: {
+            todos: [
+              { text: '学习 JavaScript' },
+              { text: '学习 Vue' },
+              { text: '整个牛项目' }
+            ]
+          }
+        })
+    </script>
+</body>
+</html>
