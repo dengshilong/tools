@@ -74,7 +74,7 @@ function sync_date()
     SERVICE=`ps -ef | grep chronyd | grep -v  grep`
     if [ -z "$SERVICE" ];then
         echo ">>>use ntpd<<<"
-        server=`grep server /etc/ntp.conf | grep -v '#' | grep prefer | awk '{print $2}'`
+        server=`grep server /etc/ntp.conf | grep -v '#' | head -n 1 | awk '{print $2}'`
         echo $server
         echo ">>> 停止ntp服务 <<<"
         stop_ntp
