@@ -2,7 +2,7 @@ base==1.0.4
 cffi==1.9.1
 click==6.7
 colorama==0.3.7
-cryptography==1.7.1
+cryptography==3.2
 django-eav==0.9.4.post1
 gevent==1.1.2
 greenlet==0.4.10
