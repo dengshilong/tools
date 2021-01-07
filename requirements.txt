@@ -8,7 +8,7 @@ gevent==20.5.2
 greenlet==0.4.15
 idna==2.9
 jmespath==0.10.0
-lxml==4.4.1
+lxml==4.6.2
 pika==1.1.0
 pkcs7==0.1.2
 pycrypto==2.6.1
