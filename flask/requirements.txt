@@ -8,7 +8,7 @@ gevent==1.1.2
 greenlet==0.4.10
 idna==2.1
 paramiko==2.1.1
-py==1.4.22
+py==1.10.0
 pyasn1==0.1.9
 pycparser==2.17
 pytest==2.6.0
